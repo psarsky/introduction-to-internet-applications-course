@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lab 2</title>
+		<script>
+			/*
+			console.log("Hello World");
+
+			let a = 5;
+			let b = 10;
+			let c = a + b;
+
+			const d = 10;
+
+			let f = true;
+
+			if (a < b) {
+				console.log("a is less than b");
+			}
+
+			let g = 1;
+			let h = "1";
+
+			if (g == h) {
+				console.log("g is equal to h (shallow)");
+			}
+
+			if (g === h) {
+				console.log("g is equal to h (strict)");
+			}
+
+			for (let i = 0; i < 10; i++) {
+				console.log(i);
+			}
+
+			const student = {
+				name: "John",
+				age: 25,
+				isStudent: true,
+			};
+
+			student.profession = "software developer";
+
+			const x = student;
+			x.profession = "student";
+			x["profession"] = "teacher";
+
+			console.log(student);
+
+			let a1 = 5;
+			let a2 = 8;
+
+			let a3 = Math.max(a1, a2);
+
+			let a4 = 5.45;
+			console.log(Math.floor(a4));
+
+			const arr = [1, 2, 3, 21, 37];
+
+			console.log(arr.length);
+
+			arr.push(69); // dodanie na koniec
+			arr.unshift(420); // dodanie na początek
+
+			const y = arr.pop(); // pop z końca
+			const z = arr.shift(); // pop z początku
+			console.log(y);
+			console.log(z);
+			console.log(arr);
+            */
+			function add(a, b) {
+				return a + b;
+			}
+			const c1 = 5;
+			const c2 = 10;
+			const c3 = add(c1, c2);
+			console.log(c3);
+
+			const add2 = (a, b) => a + b;
+			const c4 = add2(c1, c2);
+			console.log(c4);
+
+			const add3 = function (a, b) {
+				return a + b;
+			};
+			const c5 = add3(c1, c2);
+			console.log(c5);
+
+			function fun(a, b, op) {
+				a += 1;
+				b += 1;
+				return op(a, b);
+			}
+
+			const c6 = fun(5, 10, add2);
+			console.log(c5);
+
+			const c7 = fun(5, 10, (a, b) => a - b);
+			console.log(c6);
+
+			const c8 = fun(5, 10, function (a, b) {
+				return a * b;
+			});
+			console.log(c8);
+
+			const arr = [4, 8, 5, 12, 6, 34, 9, 10];
+			console.log(arr);
+
+			const arr2 = arr.filter((x) => {
+				return x >= 10;
+			});
+			console.log(arr2);
+
+			const arr3 = [1, true, "hello"];
+			console.log(arr3);
+
+			const arr4 = arr3.filter((x) => {
+				return typeof x === "string";
+			});
+			console.log(arr4);
+
+			const arr5 = arr.map((x) => {
+				return x * 2;
+			});
+			console.log(arr5);
+		</script>
+	</head>
+	<body></body>
+</html>
