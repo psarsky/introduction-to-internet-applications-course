@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lab 2</title>
+
+		<style>
+			.class {
+				background-color: red;
+				font-size: 25px;
+				color: white;
+				width: 100px;
+				height: 100px;
+				font-weight: 600;
+			}
+			.class2 {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+			}
+			.changeColor {
+				background-color: blue;
+			}
+			#bt1 {
+				padding: 10px 30px;
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="bt1">Click me</button>
+		<div id="parent"></div>
+
+		<script>
+			//const element = document.getElementById("test");
+			//element.innerText = "<b>Goodbye</b>";
+			//element.innerHTML = "<i>Goodbye</i>";
+
+			const parentDiv = document.getElementById("parent");
+			parentDiv.className = "class2";
+			// parentDiv.classList = "klasa klasa2"
+        	// parentDiv.style.color = "blue"
+        	// parentDiv.style["font-size"] = "24px"
+        	// parentDiv.style.fontSize = "38px"
+        	// parentDiv.style.backgroundColor = "green"
+
+			// const newChild = document.createElement("div");
+			// newChild.classList = "class";
+			// setTimeout(function() {
+			// 	parentDiv.appendChild(newChild);
+			// }, 3000);
+
+
+			// const newChild2 = document.createElement("div")
+        	// parentDiv.appendChild(newChild2)
+        	// const newChild3 = document.createElement("div")
+        	// parentDiv.appendChild(newChild3)
+
+			const button = document.getElementById("bt1");
+
+			button.addEventListener("click", (e) => {
+				const newChild = document.createElement("div");
+				newChild.classList = "class";
+				parentDiv.appendChild(newChild);
+
+				let counter = 0;
+				newChild.innerHTML = counter;
+
+				newChild.addEventListener("click", (e2) => {
+					newChild.classList.toggle("changeColor");
+					counter++;
+					newChild.innerHTML = counter;
+				});
+			});
+		</script>
+	</body>
+</html>
