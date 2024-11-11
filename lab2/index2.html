@@ -8,15 +8,16 @@
 		<style>
 			.class {
 				background-color: red;
-				font-size: 20px;
+				font-size: 25px;
 				color: white;
 				width: 100px;
 				height: 100px;
+				font-weight: 600;
 			}
 			.class2 {
 				display: flex;
 				flex-direction: column;
-				gap: 10px;
+				gap: 20px;
 			}
 			.changeColor {
 				background-color: blue;
@@ -37,16 +38,27 @@
 			//element.innerHTML = "<i>Goodbye</i>";
 
 			const parentDiv = document.getElementById("parent");
-			parentDiv.classList = "class2";
+			parentDiv.className = "class2";
+			// parentDiv.classList = "klasa klasa2"
+        	// parentDiv.style.color = "blue"
+        	// parentDiv.style["font-size"] = "24px"
+        	// parentDiv.style.fontSize = "38px"
+        	// parentDiv.style.backgroundColor = "green"
 
-			//const newChild = document.createElement("div");
-			//newChild.classList = "class";
+			// const newChild = document.createElement("div");
+			// newChild.classList = "class";
+			// setTimeout(function() {
+			// 	parentDiv.appendChild(newChild);
+			// }, 3000);
 
-			setTimeout(() => {
-				parentDiv.appendChild(newChild);
-			}, 3000);
+
+			// const newChild2 = document.createElement("div")
+        	// parentDiv.appendChild(newChild2)
+        	// const newChild3 = document.createElement("div")
+        	// parentDiv.appendChild(newChild3)
 
 			const button = document.getElementById("bt1");
+
 			button.addEventListener("click", (e) => {
 				const newChild = document.createElement("div");
 				newChild.classList = "class";
