@@ -1,0 +1,1 @@
+let buttons = document.getElementsByClassName("button");

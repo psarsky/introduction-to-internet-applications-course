@@ -7,7 +7,8 @@ fetch('https://dummyjson.com/todos')
         todos.forEach((element) => {
             const todo = document.createElement("div");
             todo.classList.add("list-item")
-            const checkbox = document.createElement("div");
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
             checkbox.classList.add("checkbox");
             const text = document.createElement("div");
             text.innerHTML = element.todo;
@@ -17,6 +18,7 @@ fetch('https://dummyjson.com/todos')
             if (element.completed) {
                 todo.classList.add("list-item-done")
                 userInfo.classList.add("userinfo-done")
+                checkbox.checked = true;
             }
             text.appendChild(userInfo);
             todo.appendChild(checkbox);
