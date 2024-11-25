@@ -47,8 +47,8 @@ function updateScreen() {
     let minutes = Math.floor(elapsedTime / 60);
     let seconds = elapsedTime % 60;
     if (minutes > 0) {
-        screen.innerHTML = minutes + "min " + seconds + "s";
+        screen.innerHTML = minutes + " min " + seconds + " s";
     } else {
-        screen.innerHTML = seconds + "s";
+        screen.innerHTML = seconds + " s";
     }
 }
