@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lab 3</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script defer src="script.js"></script>
+	</head>
+	<body>
+		<div class="filter">
+			<label for="filter">Filtruj:</label>
+			<input type="text" id="filter" />
+			<select id="filterSelect">
+				<option value="original">Oryginalna kolejność</option>
+				<option value="asc">Rosnąco</option>
+				<option value="desc">Malejąco</option>
+			</select>
+			<button id="filterButton">Filtruj</button>
+		</div>
+		<table>
+			<thead>
+				<tr>
+					<th>Zdjęcie</th>
+					<th>Tytuł</th>
+					<th>Opis</th>
+				</tr>
+			</thead>
+			<tbody id="tableBody"></tbody>
+		</table>
+	</body>
+</html>
