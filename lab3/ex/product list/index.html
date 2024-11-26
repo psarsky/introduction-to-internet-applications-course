@@ -3,22 +3,23 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Lab 3</title>
+		<title>Product list</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<script defer src="script.js"></script>
 	</head>
 	<body>
-		<div class="filter">
-			<label for="filter">Filtruj:</label>
-			<input type="text" id="filter" />
-			<select id="filterSelect">
+		<header>
+			<label for="filter">Filtrowanie:</label>
+			<input type="text" id="filter" placeholder="Wpisz frazę" />
+			<label for="sort">Sortowanie:</label>
+			<select id="sort">
 				<option value="original">Oryginalna kolejność</option>
 				<option value="asc">Rosnąco</option>
 				<option value="desc">Malejąco</option>
 			</select>
 			<button id="filterButton">Filtruj</button>
-		</div>
-		<table>
+		</header>
+		<table id="table">
 			<thead>
 				<tr>
 					<th>Zdjęcie</th>
@@ -26,7 +27,7 @@
 					<th>Opis</th>
 				</tr>
 			</thead>
-			<tbody id="tableBody"></tbody>
+			<tbody></tbody>
 		</table>
 	</body>
 </html>

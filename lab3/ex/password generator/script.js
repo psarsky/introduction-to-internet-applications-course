@@ -11,21 +11,21 @@ document.getElementById("generate").addEventListener("click", () => {
 	}
 
 	const password = generatePassword(minLength, maxLength, includeUppercase, includeNumbers, includeSpecialChars);
-    alert("Wygenerowane hasło: " + password);
-    password = "";
+	alert("Wygenerowane hasło: " + password);
+	password = "";
 });
 
 function generatePassword(minLength, maxLength, includeUppercase, includeNumbers, includeSpecialChars) {
-    let charset = "abcdefghijklmnopqrstuvwxyz";
-    if (includeUppercase) charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    if (includeNumbers) charset += "0123456789";
-    if (includeSpecialChars) charset += "!@#$%^&*()-_=+[]{}|;:',.<>?/`~";
+	let charset = "abcdefghijklmnopqrstuvwxyz";
+	if (includeUppercase) charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	if (includeNumbers) charset += "0123456789";
+	if (includeSpecialChars) charset += "!@#$%^&*()-_=+[]{}|;:',.<>?/`~";
 
-    const passwordLength = Math.floor(Math.random() * (maxLength - minLength + 1)) + minLength;
-    let password = "";
-    for (let i = 0; i < passwordLength; i++) {
-        password += charset[Math.floor(Math.random() * charset.length)];
-    }
+	const passwordLength = Math.floor(Math.random() * (maxLength - minLength + 1)) + minLength;
+	let password = "";
+	for (let i = 0; i < passwordLength; i++) {
+		password += charset[Math.floor(Math.random() * charset.length)];
+	}
 
-    return password;
+	return password;
 }
