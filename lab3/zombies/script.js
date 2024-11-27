@@ -54,24 +54,58 @@ function spawnZombie() {
                 document.querySelectorAll("img")[i].src = "assets/empty_heart.png";
             }
             clearInterval(zombies[zombie.id]);
+            if (health <= 0) {
+				gameOver();
+			}
         }
     }, interval);
 }
 
 function moveCrosshair(e) {
-	crosshair.style.top = e.pageY + "px";
-	crosshair.style.left = e.pageX + "px";
+    crosshair.style.left = e.clientX + "px";
+    crosshair.style.top = e.clientY + "px";
 }
 
-function hitBackground() {
+function backgroundHit() {
 	score -= 5;
 	scoreDisplay.textContent = score;
 }
 
-document.body.style.cursor = "none";
-window.addEventListener("mousemove", moveCrosshair);
-gameArea.addEventListener("click", hitBackground);
+function startGame() {
+    gameArea.innerHTML = "";
+    health = 3;
+    score = 0;
+    index = 0;
+    
+    scoreDisplay.textContent = score;
+    document.body.style.cursor = "none";
 
-spawnZombie();
-spawnZombie();
-spawnZombie();
+	window.addEventListener("mousemove", moveCrosshair);
+    gameArea.addEventListener("click", backgroundHit);
+    
+    for (let i = 0; i < 3; i++) {
+		document.querySelectorAll("img")[i].src = "assets/full_heart.png";
+	}
+    
+    running = setInterval(() => {
+        spawnZombie();
+        if (score < 0) {
+			gameOver();
+		}
+    }, 1000);
+}
+
+function gameOver() {
+    clearInterval(running);
+    let zombiesToRemove = document.getElementsByClassName("zombie");
+
+    for (let i = 0; i < zombiesToRemove.length; i++) {
+        zombiesToRemove[i].remove();
+    }
+    window.removeEventListener("mousemove", moveCrosshair);
+	gameArea.removeEventListener("click", backgroundHit);
+    document.body.style.cursor = "default";
+    startGame();
+}
+
+startGame();
