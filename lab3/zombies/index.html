@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Zombies</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<audio id="startMusic" src="assets/saw.mp3" loop></audio>
+		<audio id="backgroundMusic" src="assets/doom.mp3" loop></audio>
+		<audio id="zombieSounds" src="assets/zombiesounds.mp3" loop></audio>
+		<audio id="gunshot" src="assets/shot.mp3"></audio>
+		<audio id="deathSound" src="assets/death.mp3"></audio>
+		<audio id="gameOverMusic" src="assets/sad-music.mp3"></audio>
+		<script defer src="script.js"></script>
+		<title>Zombie shooter</title>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="health">
+				<img src="assets/full_heart.png" alt="heart" id="heart1" />
+				<img src="assets/full_heart.png" alt="heart" id="heart2" />
+				<img src="assets/full_heart.png" alt="heart" id="heart3" />
+			</div>
+			<div id="scoreContainer">
+				<div id="score">0</div>
+				<div id="streak">Killstreak: 0</div>
+			</div>
+		</div>
+
+		<div id="gameArea"></div>
+
+		<div id="startScreen">
+			<div id="startText">Wanna play a game?</div>
+			<div id="options">
+				<div id="startButton">Yes...</div>
+				<div id="noButton">No...</div>
+			</div>
+		</div>
+
+		<div id="gameOver">
+			<div>Game Over!</div>
+			<div id="finalScore"></div>
+			<div id="maxStreak"></div>
+			<div id="gameOverText">Try Again?</div>
+			<div id="resetOptions">
+				<div id="reset">Yes...</div>
+				<div id="noButton2">No...</div>
+			</div>
+		</div>
+
+		<div id="crosshair">
+			<img src="assets/aim.png" alt="crosshair" />
+		</div>
+	</body>
+</html>
