@@ -5,6 +5,9 @@
 		<title>Zombies</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
+		<audio id="backgroundMusic" src="assets/doom.mp3" loop></audio>
+		<audio id="zombieSounds" src="assets/zombiesounds.mp3" loop></audio>
+		<audio id="gameOverMusic" src="assets/sad-music.mp3"></audio>
 		<script defer src="script.js"></script>
 		<title>Zombie shooter</title>
 	</head>
@@ -15,10 +18,20 @@
 				<img src="assets/full_heart.png" alt="heart" id="heart2" />
 				<img src="assets/full_heart.png" alt="heart" id="heart3" />
 			</div>
-			<div id="score">0</div>
+			<div id="scorecontainer">
+				<div id="score">0</div>
+				<div id="streak">Killstreak: 0</div>
+			</div>
 		</div>
 
 		<div id="gameArea"></div>
+
+		<div id="gameOver">
+			<div id="gameOverText">Game Over!</div>
+			<div id="finalScore"></div>
+			<div id="maxStreak"></div>
+			<div id="reset">Try Again?</div>
+		</div>
 
 		<div id="crosshair">
 			<img src="assets/aim.png" alt="crosshair" />
