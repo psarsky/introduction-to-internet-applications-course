@@ -1,12 +1,13 @@
 import express from "express";
-import bodyParser from "body-parser";
-import database from "./config/database.js";
+import database from "./models/database.js";
 import bookRoutes from "./routes/bookRoutes.js";
+import orderRoutes from "./routes/orderRoutes.js";
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(express.json());
 app.use("/api/books", bookRoutes);
+app.use("/api/orders", orderRoutes);
 
 database.sync().then(() => {
 	app.listen(3000, () => {
