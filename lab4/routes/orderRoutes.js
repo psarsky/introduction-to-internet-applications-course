@@ -1,6 +1,7 @@
 import express from "express";
 import Order from "../models/order.js";
 import Book from "../models/book.js";
+import { authToken } from "../middleware/auth.js";
 
 const router = express.Router();
 
@@ -10,17 +11,17 @@ router.get("/:userID", async (req, res) => {
 	else res.status(200).json(orders);
 });
 
-router.post("/", async (req, res) => {
-    const { userID, bookID, quantity } = req.body;
+router.post("/", authToken, async (req, res) => {
+    const { bookID, quantity } = req.body;
     const book = await Book.findByPk(bookID);
     if (!book) res.status(404).send("Book not found");
     else {
-        const order = await Order.create({ userID, bookID, quantity });
+        const order = await Order.create({ userID: req.user.userID, bookID, quantity });
         res.status(201).json({ id: order.id });
     }
 });
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", authToken, async (req, res) => {
     const order = await Order.findByPk(req.params.id);
     if (!order) res.status(404).send("Order not found");
     else {
@@ -29,7 +30,7 @@ router.delete("/:id", async (req, res) => {
     }
 });
 
-router.patch("/:id", async (req, res) => {
+router.patch("/:id", authToken, async (req, res) => {
     const order = await Order.findByPk(req.params.id);
     if (!order) res.status(404).send("Order not found");
     else {

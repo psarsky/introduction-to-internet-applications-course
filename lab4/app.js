@@ -3,7 +3,9 @@ import database from "./models/database.js";
 import bookRoutes from "./routes/bookRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
+import dotenv from "dotenv";
 
+dotenv.config();
 const app = express();
 
 app.use(express.json());
