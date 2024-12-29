@@ -12,7 +12,11 @@ import "./App.css";
 // 3.2.
 // import Password from "./components/forms/Password";
 // 3.3.
-import Login from "./components/forms/Login";
+// import Login from "./components/forms/Login";
+// 4.1.
+// import Ternary from "./components/misc/Ternary";
+// 4.2.
+import Update from "./components/misc/Update";
 
 function App() {
 	return (
@@ -25,8 +29,10 @@ function App() {
             3.1. <Form />
             3.2. <Password />
             3.3. <Login />
+            4.1. <Ternary />
+            4.2. <Update />
             */}
-			<Login />
+			<Update />
 		</div>
 	);
 }
