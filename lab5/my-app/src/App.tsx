@@ -6,7 +6,13 @@ import "./App.css";
 // 2.1.
 // import Counter from "./components/counters/Counter";
 // 2.2.
-import NewCounter from "./components/counters/NewCounter";
+// import NewCounter from "./components/counters/NewCounter";
+// 3.1.
+// import Form from "./components/forms/Form";
+// 3.2.
+// import Password from "./components/forms/Password";
+// 3.3.
+import Login from "./components/forms/Login";
 
 function App() {
 	return (
@@ -16,8 +22,11 @@ function App() {
             1.2. <NewBasket />
             2.1. <Counter />
             2.2. <NewCounter />
+            3.1. <Form />
+            3.2. <Password />
+            3.3. <Login />
             */}
-			<NewCounter />
+			<Login />
 		</div>
 	);
 }

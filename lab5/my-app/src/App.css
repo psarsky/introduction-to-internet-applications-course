@@ -49,3 +49,15 @@
 .buttons {
 	display: flex;
 }
+
+.errMsg {
+    color: rgb(255, 0, 0);
+}
+
+button:disabled:hover {
+    border-color: rgba(0, 0, 0, 0);
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
