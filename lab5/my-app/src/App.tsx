@@ -16,7 +16,11 @@ import "./App.css";
 // 4.1.
 // import Ternary from "./components/misc/Ternary";
 // 4.2.
-import Update from "./components/misc/Update";
+// import Update from "./components/misc/Update";
+// 5.1.
+// import Students from "./components/students/Students";
+// 5.2.
+import StudentManager from "./components/students/StudentManager";
 
 function App() {
 	return (
@@ -31,8 +35,10 @@ function App() {
             3.3. <Login />
             4.1. <Ternary />
             4.2. <Update />
+            5.1. <Students />
+            5.2. <StudentManager />
             */}
-			<Update />
+			<StudentManager />
 		</div>
 	);
 }
