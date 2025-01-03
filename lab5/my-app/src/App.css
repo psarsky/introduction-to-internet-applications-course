@@ -101,3 +101,16 @@ tr:hover {
 tbody td {
     color: #ccc;
 }
+
+.countdownContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-between;
+    width: 135px;
+}

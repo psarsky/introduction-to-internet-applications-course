@@ -20,12 +20,18 @@ import "./App.css";
 // 5.1.
 // import Students from "./components/students/Students";
 // 5.2.
-import StudentManager from "./components/students/StudentManager";
+// import StudentManager from "./components/students/StudentManager";
+// 6.1.
+// import Counter from "./components/effects/Counter"
+// 6.2.
+// import Title from "./components/effects/Title"
+// 6.3.
+import Countdown from "./components/effects/Countdown";
 
 function App() {
 	return (
 		<div className="App">
-            <StudentManager />
+            <Countdown />
 		</div>
 	);
 }
