@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 const Password = () => {
-	const [username, setUsername] = useState("");
-	const [password, setPassword] = useState("");
-	const [repeated, setRepeated] = useState("");
+	const [username, setUsername] = useState<string>("");
+	const [password, setPassword] = useState<string>("");
+	const [repeated, setRepeated] = useState<string>("");
 
 	return (
 		<>

@@ -14,9 +14,9 @@ const StudentManager = () => {
 	]);
 
 	const AddStudentForm = () => {
-		const [fName, setFirstName] = useState("");
-		const [lName, setLastName] = useState("");
-		const [year, setBirthYear] = useState("");
+		const [fName, setFirstName] = useState<string>("");
+		const [lName, setLastName] = useState<string>("");
+		const [year, setBirthYear] = useState<string>("");
 
 		return (
 			<>
@@ -60,12 +60,12 @@ const StudentManager = () => {
 								lastName: lName,
 								birthYear: parseInt(year),
 							};
-							setStudents((prevState) => [...prevState, newStudent]);
-                            setFirstName("");
-                            setLastName("");
-                            setBirthYear("");
+							setStudents((prevState: Student[]) => [...prevState, newStudent]);
+							setFirstName("");
+							setLastName("");
+							setBirthYear("");
 						} else {
-							alert("Year has to be a number!");
+							alert("Year must be a number!");
 						}
 					}}
 				>

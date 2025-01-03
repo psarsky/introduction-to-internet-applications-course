@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 const Ternary = () => {
-	const [a, setA] = useState(true);
-	const [b, setB] = useState(false);
+	const [a, setA] = useState<boolean>(true);
+	const [b, setB] = useState<boolean>(false);
 
 	return (
 		<>

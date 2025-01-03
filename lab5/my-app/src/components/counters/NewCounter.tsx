@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "./Button";
 
 const NewCounter = () => {
-	const [count, setCount] = useState(0);
+	const [count, setCount] = useState<number>(0);
 
 	return (
 		<>
@@ -10,10 +10,10 @@ const NewCounter = () => {
 			<p>{count}</p>
 			<div className="buttons">
 				<Button onClick={() => {
-					setCount((count: number) => count - 1);
+					setCount((prevCount: number) => prevCount - 1);
 				}} text="Decrement"/>
 				<Button onClick={() => {
-                    setCount((count: number) => count + 1);
+                    setCount((prevCount: number) => prevCount + 1);
                 }} text="Increment" />
 			</div>
 		</>

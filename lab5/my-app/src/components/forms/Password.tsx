@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 const Password = () => {
-	const [password, setPassword] = useState("");
-	const [repeated, setRepeated] = useState("");
+	const [password, setPassword] = useState<string>("");
+	const [repeated, setRepeated] = useState<string>("");
 
 	return (
 		<>
@@ -27,14 +27,14 @@ const Password = () => {
 					setRepeated(e.target.value);
 				}}
 			/>
-            <br />
-			{!password && !repeated ? (
-				<div className="errMsg">Please input your password</div>
-			) : password != repeated ? (
-				<div className="errMsg">Passwords do not match</div>
-			) : (
-				<div />
-			)}
+			<br />
+			<div className="errMsg">
+				{!password && !repeated
+					? "Please input your password"
+					: password != repeated
+					? "Passwords do not match"
+					: ""}
+			</div>
 		</>
 	);
 };

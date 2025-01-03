@@ -25,20 +25,7 @@ import StudentManager from "./components/students/StudentManager";
 function App() {
 	return (
 		<div className="App">
-			{/*
-            1.1. <Basket />
-            1.2. <NewBasket />
-            2.1. <Counter />
-            2.2. <NewCounter />
-            3.1. <Form />
-            3.2. <Password />
-            3.3. <Login />
-            4.1. <Ternary />
-            4.2. <Update />
-            5.1. <Students />
-            5.2. <StudentManager />
-            */}
-			<StudentManager />
+            <StudentManager />
 		</div>
 	);
 }

@@ -5,7 +5,7 @@ interface Student {
 }
 
 const Students = () => {
-	const studentArr: Student[] = [
+	const students: Student[] = [
 		{ firstName: "Karol", lastName: "Wojtyła", birthYear: 1920 },
 		{ firstName: "Piotr", lastName: "Łuszcz", birthYear: 1978 },
 		{ firstName: "Mariusz", lastName: "Pudzianowski", birthYear: 1977 },
@@ -22,7 +22,7 @@ const Students = () => {
 				</tr>
 			</thead>
 			<tbody>
-				{studentArr.map((student: Student) => (
+				{students.map((student: Student) => (
 					<tr>
 						<td>{student.firstName}</td>
 						<td>{student.lastName}</td>

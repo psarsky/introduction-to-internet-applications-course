@@ -1,7 +1,12 @@
 import { useState } from "react";
 
+interface Product {
+	name: string;
+	price: number;
+}
+
 const Update = () => {
-	const [product, setProduct] = useState({
+	const [product, setProduct] = useState<Product>({
 		name: "Tomato",
 		price: 50,
 	});
@@ -16,7 +21,7 @@ const Update = () => {
 			<br />
 			<button
 				onClick={() => {
-					setProduct((prevState) => ({ ...prevState, price: 100 }));
+					setProduct((prevState: Product) => ({ ...prevState, price: 100 }));
 				}}
 			>
 				Update price
