@@ -1,0 +1,15 @@
+.homePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.blogLink {
+    color: var(--text-color);
+	text-decoration: none;
+}
+
+.blogLink:hover {
+	text-decoration: underline;
+}

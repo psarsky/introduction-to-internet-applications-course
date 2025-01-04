@@ -1,0 +1,15 @@
+.noPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.homeLink {
+    color: var(--text-color);
+	text-decoration: none;
+}
+
+.homeLink:hover {
+	text-decoration: underline;
+}
