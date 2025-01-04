@@ -7,7 +7,7 @@ const Home = () => {
 			<h1>Welcome!</h1>
 			<h2>
 				You will find some interesting articles on the{" "}
-				<Link className="blogLink" to="/blog">
+				<Link className="link" to="/blog">
 					blog page
 				</Link>
 				.

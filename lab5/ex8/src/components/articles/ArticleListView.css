@@ -1,0 +1,31 @@
+.articleListView {
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.infoContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 2em;
+    font-weight: 800;
+}
+
+.id {
+    font-size: 0.9em;
+    font-weight: 100;
+}
+
+hr {
+    width: 100%;
+}
+
+.body {
+    font-weight: 200;
+}

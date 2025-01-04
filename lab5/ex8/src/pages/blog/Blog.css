@@ -1,0 +1,11 @@
+.blog {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+    width: 80%;
+    min-width: 400px;
+    max-width: 1000px;
+    border-radius: 1em;
+}

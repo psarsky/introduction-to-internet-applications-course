@@ -12,7 +12,7 @@ const Layout = () => {
 					Blog
 				</Link>
 				<Link className="navItem" to="/add">
-					New article
+					Submit
 				</Link>
 			</nav>
 			<Outlet />

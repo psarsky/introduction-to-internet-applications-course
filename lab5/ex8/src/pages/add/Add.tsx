@@ -42,7 +42,7 @@ const Add = () => {
 			<input
 				id="title"
 				type="text"
-				placeholder="Your article's title"
+				placeholder="Your title"
 				onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
 					setTitle(e.target.value);
 				}}
@@ -50,7 +50,7 @@ const Add = () => {
 			<label htmlFor="body">Body:</label>
 			<textarea
 				id="body"
-				placeholder="Write your article"
+				placeholder="Your article"
 				rows={10}
 				maxLength={3000}
 				onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => {
