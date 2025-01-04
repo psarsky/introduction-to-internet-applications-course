@@ -7,10 +7,12 @@ const Comments = () => {
 
 	useEffect(() => {
 		fetch("https://dummyjson.com/comments")
-			.then((res) => res.json())
-			.then((data) => {
-				setComments(data.comments);
-			});
+			.then((res: Response) => res.json())
+			.then(
+				(data: { comments: CommentInt[]; total: number; skip: number; limit: number }) => {
+					setComments(data.comments);
+				}
+			);
 	}, []);
 
 	return (

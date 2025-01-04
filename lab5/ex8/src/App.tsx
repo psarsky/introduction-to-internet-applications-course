@@ -5,7 +5,6 @@ import Blog from "./pages/blog/Blog";
 import Article from "./pages/article/ArticlePage";
 import Add from "./pages/add/Add";
 import NoPage from "./pages/nopage/NoPage";
-// import Counter from "./components/counter/Counter";
 
 function App() {
 	return (

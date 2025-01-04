@@ -207,7 +207,7 @@ function App() {
 									likes={420}
 									user={{
 										id: 1,
-										username: "kochamdzieci",
+										username: "jp2gmd",
 										fullName: "Karol Wojtyła",
 									}}
 								/>
