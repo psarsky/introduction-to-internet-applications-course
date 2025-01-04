@@ -26,12 +26,16 @@ import "./App.css";
 // 6.2.
 // import Title from "./components/effects/Title"
 // 6.3.
-import Countdown from "./components/effects/Countdown";
+// import Countdown from "./components/effects/Countdown";
+// 7.1.
+// import Comment from "./components/products/Comment";
+// 7.2.
+import Comments from "./components/products/Comments";
 
 function App() {
 	return (
 		<div className="App">
-            <Countdown />
+			<Comments />
 		</div>
 	);
 }

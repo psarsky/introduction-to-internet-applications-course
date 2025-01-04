@@ -15,8 +15,12 @@ const Counter = () => {
 		<>
 			<h1>Counter</h1>
 			<p>{count}</p>
-			<button onClick={() => setCount((prevCount: number) => prevCount - 1)}>Decrement</button>
-			<button onClick={() => setCount((prevCount: number) => prevCount + 1)}>Increment</button>
+			<button onClick={() => setCount((prevCount: number) => prevCount - 1)}>
+				Decrement
+			</button>
+			<button onClick={() => setCount((prevCount: number) => prevCount + 1)}>
+				Increment
+			</button>
 		</>
 	);
 };
