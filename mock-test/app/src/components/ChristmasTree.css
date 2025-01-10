@@ -1,0 +1,15 @@
+.christmasTree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+}
+
+.button {
+    background-color: grey;
+    width: 20%;
+    height: 80%;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}

@@ -1,0 +1,23 @@
+#container {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.inputContainer {
+	background-color: rgb(104, 59, 38);
+	display: flex;
+	height: 30px;
+	padding: 10px;
+	gap: 10px;
+}
+
+.treeContainer {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+}
+
+.addTree {
+	cursor: pointer;
+}
