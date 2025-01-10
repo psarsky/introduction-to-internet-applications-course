@@ -1,0 +1,10 @@
+.balloon {
+	background-image: url("../assets/balloon.png");
+	background-size: 100%;
+	background-position: center;
+	position: absolute;
+	width: 100px;
+	height: 200px;
+	transition: top 3s;
+	cursor: pointer;
+}

@@ -1,26 +1,26 @@
+import "./Balloon.css";
 import { useState } from "react";
 
 const Balloon = (props: { scale: number; x: number; y: number }) => {
-	const [size, setSize] = useState<number>(props.scale);
+	const [scale, setScale] = useState<number>(props.scale);
+	const [y, setY] = useState<number>(props.y);
 
 	const changeScale = () => {
-		if (size >= 0.4) {
-			setSize((prevSize: number) => prevSize - 0.2);
+		setScale((prevScale: number) =>
+			scale >= 0.65 ? prevScale - 0.1 : 0.5
+		);
+		if (scale <= 0.65) {
+			setY(-100);
 		}
 	};
 
 	return (
 		<div
+			className="balloon"
 			style={{
-				backgroundColor: "red",
-				transform: `scale(${size})`,
-				width: "100px",
-				height: "100px",
-				border: "1px solid black",
-				position: "absolute",
-                left: `${props.x}%`,
-                top: `${props.y}%`,
-                cursor: "pointer"
+				transform: `scale(${scale})`,
+				left: `${props.x}%`,
+				top: `${y}%`,
 			}}
 			onClick={changeScale}
 		></div>
