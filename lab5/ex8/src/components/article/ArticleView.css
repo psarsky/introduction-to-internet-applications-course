@@ -1,0 +1,36 @@
+.articleView {
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.articleInfoContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5em;
+}
+
+.articleTitle {
+    font-size: 2em;
+    font-weight: 800;
+    max-width: 21em;
+}
+
+.articleID {
+    font-size: 0.9em;
+    font-weight: 100;
+    width: 7em;
+    text-align: right;
+}
+
+hr {
+    width: 100%;
+}
+
+.articleBody {
+    margin-bottom: 0.5em;
+}
