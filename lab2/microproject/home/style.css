@@ -1,0 +1,412 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Common */
+body {
+	font-family: "Poppins";
+	font-size: 1vw;
+	margin: 0;
+	background-color: var(--background-color);
+	color: var(--text-color);
+}
+
+:root {
+	--background-color: #faf6e3;
+	--text-color: #2a3663;
+	--primary-color: #b59f78;
+	--secondary-color: #d8dbbd;
+	--field-color: #edf0d8;
+}
+
+.dark-mode {
+	--background-color: #3b3030;
+	--text-color: #fff0d1;
+	--primary-color: #664343;
+	--secondary-color: #795757;
+	--field-color: #9e7979;
+}
+
+/*.dark-mode {
+    --background-color: #2C3639;
+    --text-color: #DCD7C9;
+    --primary-color: #3F4E4F;
+    --secondary-color: #A27B5C;
+}*/
+
+header {
+	display: flex;
+	justify-content: center;
+	background-color: var(--primary-color);
+	padding: 1em 0;
+	text-align: center;
+}
+
+.theme-button button {
+	position: absolute;
+	top: 1vw;
+	left: 1vw;
+	width: 12vw;
+	height: 3vw;
+	font-size: 1em;
+	background: none;
+	border: 1px solid var(--text-color);
+	color: var(--text-color);
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.theme-button button:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+#clock {
+	position: absolute;
+	top: 1vw;
+	right: 1vw;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+	background: var(--secondary-color);
+	margin-bottom: 2vw;
+}
+
+.nav-item {
+	color: var(--text-color);
+	padding: 1em;
+	text-decoration: none;
+}
+
+.nav-item:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+	text-align: center;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	background-color: var(--primary-color);
+	padding: 1em;
+	margin-top: 1vw;
+}
+
+/* Home */
+.home {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 80%;
+	max-width: 800px;
+	background-color: var(--secondary-color);
+	margin: 2vw;
+	padding: 3vw;
+	border-radius: 20px;
+}
+
+.intro {
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.prizes {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 2vw;
+}
+
+.faq {
+	display: flex;
+	flex-direction: column;
+	margin-top: 2vw;
+	margin-bottom: 2vw;
+	width: 80%;
+}
+
+.question {
+	font-family: "Poppins";
+	font-size: 1em;
+	background-color: var(--background-color);
+	color: var(--text-color);
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	text-align: left;
+	border: none;
+	outline: none;
+	transition: 0.4s;
+}
+
+.active,
+.question:hover {
+	background-color: var(--primary-color);
+}
+
+.panel {
+	padding: 0 18px;
+	background-color: var(--field-color);
+	max-height: 0;
+	overflow: hidden;
+	text-wrap: wrap;
+	transition: max-height 0.2s ease-out;
+}
+
+.link {
+	color: var(--primary-color);
+}
+
+/* Gallery */
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2vw;
+}
+
+.gallery figure {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 30%;
+}
+
+.gallery figcaption {
+	margin-top: 5px;
+	font-size: 0.9em;
+	color: var(--text-color);
+	text-align: center;
+}
+
+.gallery img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	cursor: pointer;
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.4) 0.1vw 0.1vw 1.5vw;
+}
+
+.gallery img:hover {
+	transform: scale(1.05);
+}
+
+#overlay {
+	display: none;
+	position: fixed;
+	flex-direction: column;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+#overlay img {
+	max-width: 80%;
+	max-height: 80%;
+	border-radius: 5px;
+	box-shadow: rgba(255, 255, 255, 0.6) 2px 2px 20px;
+}
+
+#overlay-caption {
+	color: white;
+	margin-top: 1vw;
+	font-size: 1.2em;
+}
+
+.close-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 2vw;
+	right: 2vw;
+	font-size: 2em;
+	color: white;
+	border: white 3px solid;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.close-btn:hover {
+	box-shadow: rgba(255, 255, 255, 0.6) 2px 2px 20px;
+}
+
+.video-container {
+	margin: 3vw;
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.video-container figcaption {
+	margin-top: 5px;
+	font-size: 0.9em;
+	color: var(--text-color);
+	text-align: center;
+}
+
+#player {
+	box-shadow: rgba(0, 0, 0, 0.6) 0.2vw 0.2vw 2vw;
+	border-radius: 5px;
+}
+
+/* Form */
+form {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	max-width: 800px;
+	margin: 2vw;
+	background-color: var(--secondary-color);
+	padding: 20px;
+	border-radius: 20px;
+}
+
+form input,
+form textarea,
+form select {
+	width: 100%;
+	padding: 1vw;
+	margin-top: 1vw;
+	margin-bottom: 1vw;
+	font-size: 1em;
+	box-sizing: border-box;
+	background-color: var(--field-color);
+	border: 1px solid var(--field-color);
+	border-radius: 5px;
+}
+
+form textarea {
+	resize: none;
+}
+
+.submit {
+	font-size: 1em;
+	background-color: var(--primary-color);
+	color: var(--text-color);
+	border: none;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.submit:hover {
+	background-color: var(--field-color);
+}
+
+#topic,
+input,
+textarea {
+	color: var(--text-color);
+}
+
+::placeholder {
+	color: var(--text-color);
+	opacity: 0.5;
+}
+
+.counter,
+.error {
+	text-align: right;
+	font-size: 0.7em;
+}
+
+.error {
+	color: red;
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1600px) {
+	body {
+		font-size: 1.5vw;
+	}
+
+	.home {
+		border-radius: 18px;
+	}
+
+	.theme-button button {
+		width: 15vw;
+		height: 3.5vw;
+	}
+
+	form {
+		border-radius: 18px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	body {
+		font-size: 2vw;
+	}
+
+	.nav-item {
+		font-size: 1.3em;
+	}
+
+	.home {
+		border-radius: 15px;
+	}
+
+	.theme-button button {
+		width: 19vw;
+		height: 4.5vw;
+	}
+
+	form {
+		border-radius: 15px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	body {
+		font-size: 3vw;
+	}
+
+	.home {
+		border-radius: 10px;
+	}
+
+	h1 {
+		margin-top: 6vw;
+	}
+
+	.theme-button button {
+		width: 25vw;
+		height: 6vw;
+	}
+
+	.gallery {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.gallery figure {
+		width: 80%;
+	}
+
+	form {
+		border-radius: 10px;
+	}
+}

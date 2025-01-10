@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mistrzostwa AGH we Flanki</title>
+		<link rel="stylesheet" href="../home/style.css" type="text/css" />
+		<link rel="icon" href="../assets/harnas.png" type="image/x-icon" />
+		<script defer src="../home/script.js"></script>
+		<script defer src="gallery.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<span class="theme-button">
+				<button onclick="toggleTheme()">Przełącz motyw</button>
+            </span>
+			<h1>Mistrzostwa AGH we Flanki</h1>
+			<time id="clock"></time>
+		</header>
+
+		<nav>
+			<a class="nav-item" href="../home/index.html">Home</a>
+			<a class="nav-item" href="../gallery/gallery.html">Galeria</a>
+			<a class="nav-item" href="../contact/contact.html">Kontakt</a>
+		</nav>
+
+		<main>
+			<h2>Galeria</h2>
+
+			<section class="gallery">
+				<figure>
+					<img
+						src="../assets/zawody.jpg"
+						alt="Zdjęcie z zawodów"
+						onclick="openOverlay(this)"
+					/>
+					<figcaption>Zdjęcie z zawodów</figcaption>
+				</figure>
+				<figure>
+					<img
+						src="../assets/druzyna.jpg"
+						alt="Zdjęcie drużynowe"
+						onclick="openOverlay(this)"
+					/>
+					<figcaption>Zdjęcie drużynowe</figcaption>
+				</figure>
+				<figure>
+					<img
+						src="../assets/flanki_w_akcji.jpg"
+						alt="Flanki w akcji"
+						onclick="openOverlay(this)"
+					/>
+					<figcaption>Flanki w akcji</figcaption>
+				</figure>
+				<figure>
+					<img
+						src="../assets/publicznosc.jpg"
+						alt="Publiczność"
+						onclick="openOverlay(this)"
+					/>
+					<figcaption>Publiczność</figcaption>
+				</figure>
+			</section>
+
+			<section class="video-container">
+				<video id="player" width="100%" controls>
+					<source
+						src="../assets/flanki.mp4"
+						type="video/mp4"
+						alt="Film przedstawiający zasady gry we flanki"
+					/>
+				</video>
+				<figcaption>
+					Film przedstawiający zasady gry we flanki
+				</figcaption>
+			</section>
+
+			<span id="overlay">
+				<span class="close-btn" onclick="closeOverlay()">&times;</span>
+				<img id="overlay-img" src="" alt="" />
+				<p id="overlay-caption"></p>
+			</span>
+		</main>
+
+		<footer>
+			<p>&copy;2024: Jakub Psarski</p>
+		</footer>
+	</body>
+</html>
