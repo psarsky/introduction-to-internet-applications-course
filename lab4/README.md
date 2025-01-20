@@ -1,10 +1,7 @@
-setup:
-npm init --y
-npm install express sequelize sqlite3 bcrypt jsonwebtoken dotenv
-npm install --save-dev nodemon
+setup:<br>
+npm init --y<br>
+npm install express sequelize sqlite3 bcrypt jsonwebtoken dotenv<br>
+npm install --save-dev nodemon<br><br>
 
-start:
+start:<br>
 npm run devStart
-
-exit:
-Ctrl+C
