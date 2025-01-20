@@ -1,1 +1,1 @@
-WDAI 2024/25
+# Introduction to Internet Applications course at AGH UST - 2024/25.
